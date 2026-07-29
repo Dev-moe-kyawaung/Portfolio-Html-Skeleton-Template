@@ -1,0 +1,2657 @@
+<!-- ============================================================
+  MOE KYAW AUNG — SENIOR ANDROID DEVELOPER PORTFOLIO
+  HTML STRUCTURE TEMPLATE (SKELETON)
+  Version: 2.0
+  ⚡ Fully responsive | SEO optimized | Accessibility ready
+  -------------------------------------------------------------
+  Instructions:
+  1. Add CSS styles between <style> tags
+  2. Add JavaScript between <script> tags
+  3. Replace placeholder images with your assets
+  4. Fill in your actual content
+  ============================================================ -->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ========== META TAGS (SEO) ========== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moe Kyaw Aung — Senior Android Developer with 12+ years experience. Kotlin, Jetpack Compose, MVVM, Clean Architecture expert.">
+  <meta name="keywords" content="Android Developer, Kotlin, Jetpack Compose, MVVM, Clean Architecture, Firebase, Myanmar, Thailand">
+  <meta name="author" content="Moe Kyaw Aung">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Moe Kyaw Aung | Senior Android Developer">
+  <meta property="og:description" content="12+ years building secure, scalable mobile apps.">
+  <meta property="og:image" content="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp">
+  <meta property="og:url" content="https://moekyawaung.github.io">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moe Kyaw Aung | Senior Android Developer">
+  <meta name="twitter:description" content="Senior Android Developer — Kotlin, Jetpack Compose, Clean Architecture">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image_1_buwgls.png">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image_1_buwgls.png">
+
+  <!-- Title -->
+  <title>Moe Kyaw Aung | Senior Android Developer</title>
+
+  <!-- ========== FONTS ========== -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+Myanmar:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- ========== ICONS ========== -->
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ========== CSS FRAMEWORKS ========== -->
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ========== YOUR CUSTOM CSS ========== -->
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES (ROOT VARIABLES)
+       ============================================================ */
+    :root {
+      /* Colors - Dark Theme */
+      --bg-primary: #0a0a1a;
+      --bg-secondary: #12122a;
+      --bg-glass: rgba(255, 255, 255, 0.06);
+      --bg-glass-hover: rgba(255, 255, 255, 0.12);
+      --text-primary: #f0f0f8;
+      --text-secondary: #a8a8c8;
+      --text-muted: #6a6a8e;
+      --accent: #6c63ff;
+      --accent-light: #a78bfa;
+      --accent-dark: #4f46e5;
+      --success: #34d399;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --border-color: rgba(255, 255, 255, 0.06);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
+      
+      /* Gradients */
+      --gradient-primary: linear-gradient(135deg, #6c63ff, #a78bfa);
+      --gradient-hero: linear-gradient(135deg, #1a1a3e 0%, #2d1b69 100%);
+      
+      /* Fonts */
+      --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+      --font-myanmar: 'Noto Sans Myanmar', 'Padauk', sans-serif;
+      
+      /* Transitions */
+      --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+      --transition-fast: 0.3s ease;
+      --transition-medium: 0.5s ease;
+    }
+
+    /* Light Theme Overrides */
+    [data-theme="light"] {
+      --bg-primary: #f8f9fc;
+      --bg-secondary: #ffffff;
+      --bg-glass: rgba(0, 0, 0, 0.04);
+      --bg-glass-hover: rgba(0, 0, 0, 0.08);
+      --text-primary: #1a1a2e;
+      --text-secondary: #4a4a6a;
+      --text-muted: #7a7a9e;
+      --border-color: rgba(0, 0, 0, 0.08);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
+      --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    /* ============================================================
+       RESET & BASE STYLES
+       ============================================================ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background var(--transition-fast), color var(--transition-fast);
+      overflow-x: hidden;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+    /* Selection */
+    ::selection { background: var(--accent); color: white; }
+
+    /* ============================================================
+       GLASSMORPHISM UTILITY CLASSES
+       ============================================================ */
+    .glass {
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      transition: all var(--transition-fast);
+    }
+
+    .glass:hover {
+      background: var(--bg-glass-hover);
+      border-color: var(--accent);
+      box-shadow: 0 8px 32px rgba(108, 99, 255, 0.1);
+    }
+
+    .glass-card {
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 1.5rem;
+      transition: all var(--transition-medium) var(--transition-smooth);
+    }
+
+    .glass-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 48px rgba(108, 99, 255, 0.15);
+    }
+
+    /* ============================================================
+       ANIMATION KEYFRAMES
+       ============================================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* ============================================================
+       SCROLL REVEAL CLASSES
+       ============================================================ */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s var(--transition-smooth); }
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.8s var(--transition-smooth); }
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.8s var(--transition-smooth); }
+    .reveal-scale { opacity: 0; transform: scale(0.9); transition: all 0.8s var(--transition-smooth); }
+    
+    .reveal.visible,
+    .reveal-left.visible,
+    .reveal-right.visible,
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: translateY(0) translateX(0) scale(1);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* ============================================================
+       SECTION COMMON STYLES
+       ============================================================ */
+    .section-padding { padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 3rem; }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      font-weight: 600;
+      padding: 4px 16px;
+      border-radius: 50px;
+      background: rgba(108, 99, 255, 0.08);
+      border: 1px solid rgba(108, 99, 255, 0.12);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .section-subtitle {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+    .btn-primary-custom {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--gradient-primary);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+    .btn-primary-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
+      color: #fff;
+    }
+
+    .btn-outline-custom {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+    .btn-outline-custom:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 991px) {
+      .section-padding { padding: 60px 0; }
+    }
+    @media (max-width: 768px) {
+      .section-padding { padding: 40px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ============================================================
+    [1] PRELOADER
+    ============================================================ -->
+  <!-- Purpose: Show loading animation while page loads -->
+  <div id="preloader">
+    <div class="loader-ring"></div>
+  </div>
+
+  <!-- ============================================================
+    [2] CUSTOM CURSOR
+    ============================================================ -->
+  <!-- Purpose: Custom mouse cursor for premium feel -->
+  <div class="custom-cursor" id="cursor"></div>
+
+  <!-- ============================================================
+    [3] BACK TO TOP BUTTON
+    ============================================================ -->
+  <!-- Purpose: Floating button to scroll to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ============================================================
+    [4] STICKY CTA BUTTON
+    ============================================================ -->
+  <!-- Purpose: Persistent call-to-action button -->
+  <button class="sticky-cta" id="stickyCta" aria-label="Contact me">
+    <i class="fas fa-comment-dots"></i> Let's Talk
+  </button>
+
+  <!-- ============================================================
+    [5] IMAGE LIGHTBOX
+    ============================================================ -->
+  <!-- Purpose: Full-screen image viewer -->
+  <div class="lightbox" id="lightbox">
+    <button class="close-lightbox" id="closeLightbox">&times;</button>
+    <img id="lightboxImg" src="" alt="Lightbox">
+  </div>
+
+  <!-- ============================================================
+    [6] NAVIGATION BAR
+    ============================================================ -->
+  <!-- This is the fixed top navigation with hamburger menu -->
+  <nav class="navbar-custom" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#" class="nav-brand">MKA</a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#apps">Apps</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Controls: Theme Toggle + Hamburger -->
+      <div class="nav-controls">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+    [7] HERO SECTION
+    ============================================================ -->
+  <!-- Main hero with particles background, typing animation, and CTA -->
+  <section class="hero-section" id="hero">
+    <!-- Particles.js Canvas (background) -->
+    <div id="particles-js"></div>
+
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <!-- Left Column: Text Content -->
+        <div class="col-lg-7">
+          <!-- Badge -->
+          <div class="hero-badge">
+            <span class="dot"></span>
+            Senior Android Developer
+          </div>
+
+          <!-- Main Title -->
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Moe Kyaw Aung</span>
+          </h1>
+
+          <!-- Typing Animation Subtitle -->
+          <h2 class="hero-subtitle-typing">
+            <span class="typing-text" id="typingText"></span>
+          </h2>
+
+          <!-- Description -->
+          <p class="hero-description">
+            Android developer with nearly 12 years of hands-on experience building secure, scalable, and user-friendly mobile applications. Strong in Kotlin and modern Jetpack development.
+          </p>
+
+          <!-- Meta Information (Location, Languages) -->
+          <div class="hero-meta">
+            <span class="hero-meta-item">
+              <i class="fas fa-map-marker-alt"></i> Tachileik, Myanmar 🇲🇲 ↔ Bangkok, Thailand 🇹🇭
+            </span>
+            <span class="hero-meta-item">
+              <i class="fas fa-code"></i> Kotlin · Jetpack Compose · MVVM
+            </span>
+            <span class="hero-meta-item">
+              <i class="fas fa-language"></i> Burmese 🇲🇲 · English 🌐
+            </span>
+          </div>
+
+          <!-- Statistics Counters -->
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="number counter-value" data-target="12">0</div>
+              <div class="label">Years Exp</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number counter-value" data-target="100">0</div>
+              <div class="label">Apps Built</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number counter-value" data-target="43">0</div>
+              <div class="label">Repos</div>
+            </div>
+            <div class="hero-stat">
+              <div class="number" style="color:var(--success);">100%</div>
+              <div class="label">Satisfaction</div>
+            </div>
+          </div>
+
+          <!-- Call-to-Action Buttons -->
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary-custom">
+              <i class="fas fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="#apps" class="btn-outline-custom">
+              <i class="fas fa-rocket"></i> View My Apps
+            </a>
+            <a href="#certificates" class="btn-outline-custom">
+              <i class="fas fa-certificate"></i> Certificates
+            </a>
+          </div>
+
+          <!-- Social Media Icons -->
+          <div class="hero-social">
+            <a href="https://github.com/Dev-moe-kyawaung" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://gravatar.com/moekyawaung13721" target="_blank" rel="noopener" aria-label="Gravatar"><i class="fas fa-user-circle"></i></a>
+            <a href="mailto:moekyawaung@programmer.net" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+959889000889" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://t.me/moekyawaung" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://play.google.com/store/apps/developer?id=Moe+Kyaw+Aung" target="_blank" rel="noopener" aria-label="Play Store"><i class="fab fa-google-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tumblr.com/moekyawaung" target="_blank" rel="noopener" aria-label="Tumblr"><i class="fab fa-tumblr"></i></a>
+            <a href="https://www.flickr.com/people/204037451@N06" target="_blank" rel="noopener" aria-label="Flickr"><i class="fab fa-flickr"></i></a>
+            <a href="https://bsky.app/profile/moekyawaung96.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fas fa-cloud"></i></a>
+            <a href="https://vimeo.com/user252414232" target="_blank" rel="noopener" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Column: Profile Image -->
+        <div class="col-lg-5 text-center">
+          <div class="hero-image-wrapper">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763535/MKA_25_lbx6fb.webp" alt="Moe Kyaw Aung - Senior Android Developer" loading="lazy">
+            <!-- Experience Badge overlay -->
+            <div class="hero-experience-badge">
+              12+
+              <small>Years</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [8] ANIMATED COUNTERS SECTION
+    ============================================================ -->
+  <!-- Purpose: Display animated statistics with progress rings -->
+  <section class="counter-section section-padding" id="counters">
+    <div class="container">
+      <div class="counter-grid">
+        <!-- Counter Item 1 -->
+        <div class="counter-item">
+          <!-- SVG Progress Ring -->
+          <div class="counter-ring">
+            <svg viewBox="0 0 80 80">
+              <circle class="bg-ring" cx="40" cy="40" r="35"/>
+              <circle class="progress-ring" cx="40" cy="40" r="35" id="ring-1"/>
+            </svg>
+          </div>
+          <div class="counter-number counter-value" data-target="12">0</div>
+          <div class="counter-label">Years of Experience</div>
+        </div>
+
+        <!-- Counter Item 2 -->
+        <div class="counter-item">
+          <div class="counter-ring">
+            <svg viewBox="0 0 80 80">
+              <circle class="bg-ring" cx="40" cy="40" r="35"/>
+              <circle class="progress-ring" cx="40" cy="40" r="35" id="ring-2"/>
+            </svg>
+          </div>
+          <div class="counter-number counter-value" data-target="100">0</div>
+          <div class="counter-label">Apps Developed</div>
+        </div>
+
+        <!-- Counter Item 3 -->
+        <div class="counter-item">
+          <div class="counter-ring">
+            <svg viewBox="0 0 80 80">
+              <circle class="bg-ring" cx="40" cy="40" r="35"/>
+              <circle class="progress-ring" cx="40" cy="40" r="35" id="ring-3"/>
+            </svg>
+          </div>
+          <div class="counter-number counter-value" data-target="43">0</div>
+          <div class="counter-label">GitHub Repos</div>
+        </div>
+
+        <!-- Counter Item 4 -->
+        <div class="counter-item">
+          <div class="counter-ring">
+            <svg viewBox="0 0 80 80">
+              <circle class="bg-ring" cx="40" cy="40" r="35"/>
+              <circle class="progress-ring" cx="40" cy="40" r="35" id="ring-4"/>
+            </svg>
+          </div>
+          <div class="counter-number" style="color:var(--success);">100%</div>
+          <div class="counter-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [9] ABOUT SECTION (Animated + Timeline)
+    ============================================================ -->
+  <!-- Purpose: Detailed about me with career timeline -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Senior Android Developer with a Passion for Clean Code</h2>
+        <p class="section-subtitle">Building secure, scalable mobile applications for nearly a decade and a half.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Image -->
+        <div class="about-image-wrapper">
+          <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778763531/MKA_12_iv8kpm.webp" alt="Moe Kyaw Aung at work" loading="lazy">
+          <!-- Floating stats badge -->
+          <div class="about-stats-badge">
+            <span>🎯 100+ Apps</span>
+            <span>📜 40+ Certs</span>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="about-content">
+          <p>
+            I'm Moe Kyaw Aung, a Senior Android Developer with nearly 12 years of hands-on experience building secure, scalable, and user-friendly mobile applications. I specialize in Kotlin and modern Jetpack development (Compose, ViewModel, Room), Firebase integration, and REST API consumption. My focus is on clean architecture, maintainable code, and practical security.
+          </p>
+
+          <!-- Tech Tags -->
+          <div class="about-tech-tags">
+            <span class="tech-tag">Kotlin</span>
+            <span class="tech-tag">Jetpack Compose</span>
+            <span class="tech-tag">MVVM</span>
+            <span class="tech-tag">Clean Architecture</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Retrofit</span>
+            <span class="tech-tag">Dagger/Hilt</span>
+            <span class="tech-tag">Coroutines</span>
+            <span class="tech-tag">Room</span>
+            <span class="tech-tag">CI/CD</span>
+          </div>
+
+          <!-- Career Timeline -->
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <div class="year">2023 – Present</div>
+              <h4>Senior Android Engineer</h4>
+              <p>Leading Android development, implementing Jetpack Compose, MVVM architecture, and Firebase services for enterprise applications.</p>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <div class="year">2019 – 2023</div>
+              <h4>Android Developer</h4>
+              <p>Built production apps with Kotlin, Clean Architecture, Room, and Retrofit. Mentored junior developers and established coding standards.</p>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <div class="year">2015 – 2019</div>
+              <h4>Mobile App Developer</h4>
+              <p>Developed Android applications using Java and Kotlin. Integrated third-party libraries and REST APIs for various client projects.</p>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+              <div class="year">2012 – 2015</div>
+              <h4>Junior Android Developer</h4>
+              <p>Started career specializing in Android development. Learned Java, XML layouts, and basic Android SDK components.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [10] BURMESE LANGUAGE SUPPORT SECTION
+    ============================================================ -->
+  <!-- Purpose: Content in Burmese language -->
+  <section class="section-padding burmese-section" id="burmese">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">မြန်မာဘာသာ</span>
+        <h2 class="section-title">မြန်မာလိုပြောရရင်</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="burmese-content">
+            <h3>မင်္ဂလာပါ။ ကျွန်တော်မိုးကျော်အောင်ပါ။</h3>
+            <p>
+              ကျွန်တော်ဟာ Android Developer တစ်ယောက်ဖြစ်ပြီး ၁၂ နှစ်နီးပါး အတွေ့အကြုံရှိပါတယ်။ Kotlin, Jetpack Compose, MVVM နှင့် Clean Architecture ကိုအသုံးပြုကာ Application များကိုတည်ဆောက်ပါတယ်။
+            </p>
+            <p>
+              ကျွန်တော်ရဲ့အတွေ့အကြုံများမှာ Security, Performance Optimization, Modular Architecture နှင့် CI/CD စတဲ့အရာများပါဝင်ပါတယ်။
+            </p>
+            <p class="burmese-quote">
+              "Code with culture. Build with purpose."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [11] TECH STACK / SKILLS SECTION
+    ============================================================ -->
+  <!-- Purpose: Display technologies with progress bars -->
+  <section class="section-padding" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tech Stack</span>
+        <h2 class="section-title">Technologies I Work With</h2>
+        <p class="section-subtitle">Modern tools and frameworks for building exceptional Android applications.</p>
+      </div>
+      <div class="skills-grid">
+        <!-- Skill Card 1 -->
+        <div class="skill-card glass-card">
+          <span class="skill-icon">📱</span>
+          <h4>Android / Mobile</h4>
+          <p>Kotlin · Jetpack Compose · Android SDK · Material 3 · Navigation · Lifecycle</p>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width:95%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill Card 2 -->
+        <div class="skill-card glass-card">
+          <span class="skill-icon">🏗️</span>
+          <h4>Architecture & Patterns</h4>
+          <p>MVVM · Clean Architecture · Coroutines · Flow · State Management · Repository Pattern</p>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width:92%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill Card 3 -->
+        <div class="skill-card glass-card">
+          <span class="skill-icon">☁️</span>
+          <h4>Backend & Cloud</h4>
+          <p>Firebase · REST APIs · Retrofit · Room · DataStore · WorkManager · Cloud Functions</p>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width:88%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill Card 4 -->
+        <div class="skill-card glass-card">
+          <span class="skill-icon">🤖</span>
+          <h4>AI / ML</h4>
+          <p>Claude API · TensorFlow Lite · On-Device ML · ML Kit · Natural Language Processing</p>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width:75%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill Card 5 -->
+        <div class="skill-card glass-card">
+          <span class="skill-icon">🔐</span>
+          <h4>Cybersecurity</h4>
+          <p>Ethical Hacking · OWASP · Secure Coding · Encryption · Network Security · Penetration Testing</p>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width:80%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill Card 6 -->
+        <div class="skill-card glass-card">
+          <span class="skill-icon">🛠️</span>
+          <h4>Dev Tools</h4>
+          <p>Git · GitHub Actions · Android Studio · VS Code · Figma · Postman · Firebase Console · Gradle</p>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width:90%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [12] FEATURES SECTION
+    ============================================================ -->
+  <!-- Purpose: Highlight key strengths in a grid -->
+  <section class="section-padding" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">What I Bring to Your Team</h2>
+        <p class="section-subtitle">Core strengths that make me a reliable Android engineering partner.</p>
+      </div>
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card h-100 text-center p-4">
+            <i class="fas fa-bolt" style="font-size:2.5rem;color:var(--accent);margin-bottom:1rem;"></i>
+            <h5>Performance Optimization</h5>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">Memory management, lazy loading, and efficient rendering for smooth user experiences.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card h-100 text-center p-4">
+            <i class="fas fa-shield-alt" style="font-size:2.5rem;color:var(--accent);margin-bottom:1rem;"></i>
+            <h5>Security First</h5>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">AES-256 encryption, secure storage, OWASP best practices, and dependency verification.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card h-100 text-center p-4">
+            <i class="fas fa-layer-group" style="font-size:2.5rem;color:var(--accent);margin-bottom:1rem;"></i>
+            <h5>Modular Architecture</h5>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">Clean separation of concerns with feature modules, shared libraries, and dependency injection.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="glass-card h-100 text-center p-4">
+            <i class="fas fa-sync-alt" style="font-size:2.5rem;color:var(--accent);margin-bottom:1rem;"></i>
+            <h5>CI/CD Pipeline</h5>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">Automated builds, testing, and deployment with GitHub Actions and Firebase App Distribution.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [13] APP COLLECTION SECTION (My Create Apps)
+    ============================================================ -->
+  <!-- Purpose: Show all created applications -->
+  <section class="section-padding" id="apps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Apps</span>
+        <h2 class="section-title">Application Collection</h2>
+        <p class="section-subtitle">Senior-level Android applications built with modern architecture and best practices.</p>
+      </div>
+      <div class="apps-grid">
+        <!-- App Card Template — Repeat for each app -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📊</span>
+          <h4>Social Dashboard</h4>
+          <p>Comprehensive social media analytics dashboard with real-time data visualization and user insights.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+            <a href="#"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">🎮</span>
+          <h4>Game Collection</h4>
+          <p>Curated collection of mobile games with leaderboards, achievements, and multiplayer support.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/game-collection" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">🎵</span>
+          <h4>Music Player</h4>
+          <p>Feature-rich music player with playlists, equalizer, offline support, and beautiful Material 3 design.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/video-player" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">💼</span>
+          <h4>Job Portal App</h4>
+          <p>Complete job search and recruitment platform with real-time notifications and profile management.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Job-Portal-App" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">🛒</span>
+          <h4>POS Full Version</h4>
+          <p>Enterprise point-of-sale system with inventory management, billing, and payment integration.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/POS-Full-Version" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">🌤️</span>
+          <h4>Weather App</h4>
+          <p>Accurate weather forecasting with location-based updates, beautiful animations, and hourly/daily views.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Weather-app" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">💰</span>
+          <h4>Money Tracker</h4>
+          <p>Personal finance management app with expense tracking, budgeting, and insightful analytics charts.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Daily-planner-app" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">🎯</span>
+          <h4>Video Player</h4>
+          <p>Advanced video player with subtitle support, gesture controls, playback speed, and casting capabilities.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/video-player" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">📝</span>
+          <h4>Daily Planner</h4>
+          <p>Productivity planner with task management, reminders, calendar integration, and habit tracking.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Daily-planner-app" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">💬</span>
+          <h4>Chat App</h4>
+          <p>Real-time messaging application with end-to-end encryption, media sharing, and group chat features.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">⚽</span>
+          <h4>World Cup</h4>
+          <p>Live scores, match schedules, team standings, and player statistics for international football tournaments.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/thailand-travel" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <div class="glass-card app-card">
+          <span class="app-icon">🎯</span>
+          <h4>LEGEND!</h4>
+          <p>Premium gaming experience with immersive graphics, leaderboards, and cross-platform multiplayer.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/game-collection" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- PWA App -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📱</span>
+          <h4>PWA App</h4>
+          <p>Progressive Web Application with offline support, push notifications, and installable experience.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/pwa-app" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Admin Dashboard -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📊</span>
+          <h4>Admin Dashboard</h4>
+          <p>Full-featured admin panel with user management, analytics, and real-time data visualization.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Stock Market -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📈</span>
+          <h4>Stock Market</h4>
+          <p>Real-time stock tracking, portfolio management, and market analysis with interactive charts.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- E-commerce -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🛒</span>
+          <h4>E-commerce</h4>
+          <p>Complete e-commerce solution with product management, cart, checkout, and payment gateway.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/social-dashboard" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="glass-card app-card">
+          <span class="app-icon">💼</span>
+          <h4>Portfolio</h4>
+          <p>Professional portfolio app showcasing projects, skills, and experience with stunning UI.</p>
+          <div class="app-links">
+            <a href="https://moekyawaung.github.io" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live</a>
+          </div>
+        </div>
+
+        <!-- Crypto -->
+        <div class="glass-card app-card">
+          <span class="app-icon">💸</span>
+          <h4>Crypto Tracker</h4>
+          <p>Cryptocurrency tracking with price alerts, portfolio management, and market insights.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Daily-planner-app" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Advance POS -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🏪</span>
+          <h4>Advance POS Version</h4>
+          <p>Advanced point-of-sale system with multi-store support, inventory sync, and detailed reporting.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Advance-POS-Version" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- POS Ultimate -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🏬</span>
+          <h4>POS Ultimate Version</h4>
+          <p>Ultimate POS system with everything included: CRM, inventory, accounting, and analytics.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/POS-Ultimate-Version" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- POS Ultimate Pro Max -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🏪</span>
+          <h4>POS Ultimate Pro Max</h4>
+          <p>The flagship POS system with AI-powered insights, predictive analytics, and enterprise features.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/POS-Ultimate-Pro-Max" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Thailand Travel -->
+        <div class="glass-card app-card">
+          <span class="app-icon">✈️</span>
+          <h4>Thailand Travel</h4>
+          <p>Travel guide app for Thailand with destinations, hotels, restaurants, and trip planning.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/thailand-travel" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- JavaScript Todo -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📋</span>
+          <h4>JavaScript Todo</h4>
+          <p>Feature-rich todo application built with JavaScript with drag-and-drop, categories, and reminders.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/javascript-todo" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Casino App -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🎰</span>
+          <h4>Casino App</h4>
+          <p>Entertainment gaming app with multiple casino-style games and virtual currency system.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/casino-app" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Snake Game -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🐍</span>
+          <h4>Snake Game App</h4>
+          <p>Classic snake game reimagined with modern graphics, power-ups, and leaderboard.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Snake-Game-App" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Lens Lite -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📷</span>
+          <h4>Lens Lite</h4>
+          <p>Lightweight camera app with filters, editing tools, and instant sharing capabilities.</p>
+          <div class="app-links">
+            <a href="https://github.com/moekyawaung-tech/Lens-lite" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- My Postcode -->
+        <div class="glass-card app-card">
+          <span class="app-icon">📍</span>
+          <h4>My Postcode</h4>
+          <p>Postal code lookup and location services app with map integration and offline database.</p>
+          <div class="app-links">
+            <a href="https://github.com/Moekyawaung-cyber/My_postcode-My-web_project" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Hospital Lists -->
+        <div class="glass-card app-card">
+          <span class="app-icon">🏥</span>
+          <h4>Hospital Lists</h4>
+          <p>Directory of hospitals with search, ratings, directions, and emergency contact features.</p>
+          <div class="app-links">
+            <a href="https://github.com/Moekyawaung-cyber/Hospital-Lists" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [14] CERTIFICATES COLLECTION SECTION
+    ============================================================ -->
+  <!-- Purpose: Show all professional certifications -->
+  <section class="section-padding" id="certificates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Certificates</span>
+        <h2 class="section-title">My Certification Collection</h2>
+        <p class="section-subtitle">40+ certificates across programming, web development, mobile, databases, AI, security, and more.</p>
+      </div>
+      <div class="certs-grid">
+        <!-- Certificate Card Template -->
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fab fa-android"></i></div>
+          <h5>Associate Android Developer</h5>
+          <p>Google</p>
+          <span class="cert-badge">Professional</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fab fa-google"></i></div>
+          <h5>Google Developers Launchpad</h5>
+          <p>Google</p>
+          <span class="cert-badge">Advanced</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fas fa-database"></i></div>
+          <h5>Oracle Certified Professional</h5>
+          <p>Oracle</p>
+          <span class="cert-badge">Professional</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+          <h5>Certified Ethical Hacker (CEH)</h5>
+          <p>EC-Council</p>
+          <span class="cert-badge">Advanced</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fab fa-aws"></i></div>
+          <h5>AWS Certified Developer</h5>
+          <p>Amazon</p>
+          <span class="cert-badge">Professional</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+          <h5>Google Associate Cloud Engineer</h5>
+          <p>Google Cloud</p>
+          <span class="cert-badge">Associate</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fab fa-python"></i></div>
+          <h5>Python for Data Science</h5>
+          <p>IBM</p>
+          <span class="cert-badge">Intermediate</span>
+        </div>
+
+        <div class="glass-card cert-card">
+          <div class="cert-icon"><i class="fas fa-fire"></i></div>
+          <h5>Firebase Certified</h5>
+          <p>Google</p>
+          <span class="cert-badge">Professional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [15] GITHUB ACCOUNTS COLLECTION SECTION
+    ============================================================ -->
+  <!-- Purpose: List all GitHub accounts -->
+  <section class="section-padding" id="github-accounts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GitHub Ecosystem</span>
+        <h2 class="section-title">My GitHub Accounts</h2>
+        <p class="section-subtitle">A comprehensive collection of open-source profiles and projects.</p>
+      </div>
+      <div class="github-grid">
+        <!-- Each GitHub account link -->
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-china.github.io/" target="_blank" rel="noopener">moekyawaung-china</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-developer.github.io/" target="_blank" rel="noopener">moekyawaung-developer</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaungvivov30pro-design.github.io/" target="_blank" rel="noopener">moekyawaungvivov30pro-design</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyaw-aung-mm.github.io/" target="_blank" rel="noopener">moekyaw-aung-mm</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-mk.github.io/" target="_blank" rel="noopener">moekyawaung-mk</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-microsoft.github.io/" target="_blank" rel="noopener">moekyawaung-microsoft</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-cyber.github.io/" target="_blank" rel="noopener">moekyawaung-cyber</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-bangkok.github.io/" target="_blank" rel="noopener">moekyawaung-bangkok</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-micro.github.io/" target="_blank" rel="noopener">moekyawaung-micro</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaungmka2032-boop.github.io/" target="_blank" rel="noopener">moekyawaungmka2032-boop</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-dev-mm.github.io/" target="_blank" rel="noopener">moekyawaung-dev-mm</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyaw-developer.github.io/" target="_blank" rel="noopener">moekyaw-developer</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung.github.io/" target="_blank" rel="noopener">moekyawaung</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung-mm.github.io/" target="_blank" rel="noopener">Moekyawaung-mm</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-tech.github.io/" target="_blank" rel="noopener">moekyawaung-tech</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-hack.github.io/" target="_blank" rel="noopener">moekyawaung-hack</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-graduate.github.io/" target="_blank" rel="noopener">moekyawaung-graduate</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung-Linux.github.io/" target="_blank" rel="noopener">Moekyawaung-Linux</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung-coder.github.io/" target="_blank" rel="noopener">Moekyawaung-coder</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-designer.github.io/" target="_blank" rel="noopener">moekyawaung-designer</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung2026.github.io/" target="_blank" rel="noopener">Moekyawaung2026</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaungmka2034-coder.github.io/" target="_blank" rel="noopener">moekyawaungmka2034-coder</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-web.github.io/" target="_blank" rel="noopener">moekyawaung-web</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung-dev.github.io/" target="_blank" rel="noopener">Moekyawaung-dev</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://MoeKyawAung-code.github.io/" target="_blank" rel="noopener">MoeKyawAung-code</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-creator.github.io/" target="_blank" rel="noopener">moekyawaung-creator</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-webdeveloper.github.io/" target="_blank" rel="noopener">moekyawaung-webdeveloper</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung-co.github.io/" target="_blank" rel="noopener">Moekyawaung-co</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-edu.github.io/" target="_blank" rel="noopener">moekyawaung-edu</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-senior.github.io/" target="_blank" rel="noopener">moekyawaung-senior</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moekyawaung-Development.github.io/" target="_blank" rel="noopener">Moekyawaung-Development</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-google.github.io/" target="_blank" rel="noopener">moekyawaung-google</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Moe-KyawAung.github.io/" target="_blank" rel="noopener">Moe-KyawAung</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://Dev-moe-kyawaung.github.io/" target="_blank" rel="noopener">Dev-moe-kyawaung</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-vietnam.github.io/" target="_blank" rel="noopener">moekyawaung-vietnam</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-japan.github.io/" target="_blank" rel="noopener">moekyawaung-japan</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-korea.github.io/" target="_blank" rel="noopener">moekyawaung-korea</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-singapore.github.io/" target="_blank" rel="noopener">moekyawaung-singapore</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-malaysia.github.io/" target="_blank" rel="noopener">moekyawaung-malaysia</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-indonesia.github.io/" target="_blank" rel="noopener">moekyawaung-indonesia</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-philippines.github.io/" target="_blank" rel="noopener">moekyawaung-philippines</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-india.github.io/" target="_blank" rel="noopener">moekyawaung-india</a></div>
+        <div class="glass github-item"><i class="fab fa-github"></i> <a href="https://moekyawaung-australia.github.io/" target="_blank" rel="noopener">moekyawaung-australia</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [16] LOVABLE WPA LINKS COLLECTION SECTION
+    ============================================================ -->
+  <!-- Purpose: List all Lovable.dev web app links -->
+  <section class="section-padding" id="lovable-links">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Lovable WPA</span>
+        <h2 class="section-title">Lovable Web App Links</h2>
+        <p class="section-subtitle">My collection of Lovable.dev generated web applications.</p>
+      </div>
+      <div class="lovable-grid">
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://happy-cv-creator.lovable.app" target="_blank" rel="noopener">happy-cv-creator</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaung.lovable.app" target="_blank" rel="noopener">moekyawaung</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaungmybio.lovable.app" target="_blank" rel="noopener">moekyawaungmybio</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://the-cv-palette.lovable.app" target="_blank" rel="noopener">the-cv-palette</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyaw-url.lovable.app" target="_blank" rel="noopener">moekyaw-url</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaung-dev.lovable.app" target="_blank" rel="noopener">moekyawaung-dev</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moe-kyaw-aung.lovable.app" target="_blank" rel="noopener">moe-kyaw-aung</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaungmka.lovable.app" target="_blank" rel="noopener">moekyawaungmka</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyaw.lovable.app" target="_blank" rel="noopener">moekyaw</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://m-moekyaw.lovable.app" target="_blank" rel="noopener">m-moekyaw</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://dev-moekyawaung.lovable.app" target="_blank" rel="noopener">dev-moekyawaung</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://cv-beacon.lovable.app" target="_blank" rel="noopener">cv-beacon</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://pixel-perfect-snap-39.lovable.app" target="_blank" rel="noopener">pixel-perfect-snap</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://devmoekyaw.lovable.app" target="_blank" rel="noopener">devmoekyaw</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://profile-persuasion-hub.lovable.app" target="_blank" rel="noopener">profile-persuasion-hub</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://friendly-haven-io.lovable.app" target="_blank" rel="noopener">friendly-haven-io</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaung-github.lovable.app" target="_blank" rel="noopener">moekyawaung-github</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawgithub.lovable.app" target="_blank" rel="noopener">moekyawgithub</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://joy-codify-life.lovable.app" target="_blank" rel="noopener">joy-codify-life</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://mmoekyaw.lovable.app" target="_blank" rel="noopener">mmoekyaw</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://color-code-chronicles.lovable.app" target="_blank" rel="noopener">color-code-chronicles</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaung-free.lovable.app" target="_blank" rel="noopener">moekyawaung-free</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://app-skill-gallery.lovable.app" target="_blank" rel="noopener">app-skill-gallery</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://spark-coach-create.lovable.app" target="_blank" rel="noopener">spark-coach-create</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyaw-mk.lovable.app" target="_blank" rel="noopener">moekyaw-mk</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaung-myanmar.lovable.app" target="_blank" rel="noopener">moekyawaung-myanmar</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://mmoe.lovable.app" target="_blank" rel="noopener">mmoe</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyaw-dev.lovable.app" target="_blank" rel="noopener">moekyaw-dev</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://preview--moekyawaungmkamka.lovable.app" target="_blank" rel="noopener">preview-moekyawaungmkamka</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://moekyawaungmkamka.lovable.app" target="_blank" rel="noopener">moekyawaungmkamka</a></div>
+        <div class="glass lovable-item"><i class="fas fa-link"></i> <a href="https://lovable.dev/invite/ZVLZ2S5" target="_blank" rel="noopener">lovable-invite</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [17] EMAIL COLLECTION SECTION
+    ============================================================ -->
+  <!-- Purpose: Display all email addresses with copy functionality -->
+  <section class="section-padding" id="emails">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Email Collection</span>
+        <h2 class="section-title">My Email Addresses</h2>
+        <p class="section-subtitle">Multiple identities across different professional domains. Click to copy.</p>
+      </div>
+      <div class="email-grid">
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@programmer.net" onclick="copyEmail(this)">moekyawaung@programmer.net</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@collector.org" onclick="copyEmail(this)">moekyawaung@collector.org</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@technologist.com" onclick="copyEmail(this)">moekyawaung@technologist.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@techie.com" onclick="copyEmail(this)">moekyawaung@techie.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@graphic-designer.com" onclick="copyEmail(this)">moekyawaung@graphic-designer.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@cybergal.com" onclick="copyEmail(this)">moekyawaung@cybergal.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@webname.com" onclick="copyEmail(this)">moekyawaung@webname.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@hackermail.com" onclick="copyEmail(this)">moekyawaung@hackermail.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@graduate.org" onclick="copyEmail(this)">moekyawaung@graduate.org</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@engineer.com" onclick="copyEmail(this)">moekyawaung@engineer.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@asia.com" onclick="copyEmail(this)">moekyawaung@asia.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@contractor.net" onclick="copyEmail(this)">moekyawaung@contractor.net</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@linuxmail.org" onclick="copyEmail(this)">moekyawaung@linuxmail.org</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@usa.com" onclick="copyEmail(this)">moekyawaung@usa.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@europe.com" onclick="copyEmail(this)">moekyawaung@europe.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@mail.com" onclick="copyEmail(this)">moekyawaung@mail.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@iname.com" onclick="copyEmail(this)">moekyawaung@iname.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@sociologist.com" onclick="copyEmail(this)">moekyawaung@sociologist.com</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@secretary.net" onclick="copyEmail(this)">moekyawaung@secretary.net</span>
+        </div>
+        <div class="glass email-item">
+          <i class="fas fa-envelope"></i>
+          <span class="email-text" data-email="moekyawaung@publicist.com" onclick="copyEmail(this)">moekyawaung@publicist.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [18] SOCIAL MEDIA ACCOUNTS COLLECTION SECTION
+    ============================================================ -->
+  <!-- Purpose: List all social media profiles -->
+  <section class="section-padding" id="social-media">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Social Media</span>
+        <h2 class="section-title">Connect With Me</h2>
+        <p class="section-subtitle">Find me across all major social platforms.</p>
+      </div>
+      <div class="social-grid">
+        <div class="glass social-item"><i class="fab fa-github"></i> <a href="https://github.com/Dev-moe-kyawaung" target="_blank" rel="noopener">GitHub</a></div>
+        <div class="glass social-item"><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" rel="noopener">LinkedIn</a></div>
+        <div class="glass social-item"><i class="fab fa-youtube"></i> <a href="https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG" target="_blank" rel="noopener">YouTube</a></div>
+        <div class="glass social-item"><i class="fab fa-tumblr"></i> <a href="https://www.tumblr.com/moekyawaung" target="_blank" rel="noopener">Tumblr</a></div>
+        <div class="glass social-item"><i class="fab fa-flickr"></i> <a href="https://www.flickr.com/people/204037451@N06" target="_blank" rel="noopener">Flickr</a></div>
+        <div class="glass social-item"><i class="fab fa-vimeo-v"></i> <a href="https://vimeo.com/user252414232" target="_blank" rel="noopener">Vimeo</a></div>
+        <div class="glass social-item"><i class="fas fa-cloud"></i> <a href="https://bsky.app/profile/moekyawaung96.bsky.social" target="_blank" rel="noopener">Bluesky</a></div>
+        <div class="glass social-item"><i class="fab fa-twitch"></i> <a href="https://www.twitch.tv/moekyawaung" target="_blank" rel="noopener">Twitch</a></div>
+        <div class="glass social-item"><i class="fab fa-reddit-alien"></i> <a href="https://www.reddit.com/user/moekyawaung" target="_blank" rel="noopener">Reddit</a></div>
+        <div class="glass social-item"><i class="fab fa-pinterest-p"></i> <a href="https://www.pinterest.com/moekyawaung" target="_blank" rel="noopener">Pinterest</a></div>
+        <div class="glass social-item"><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/moekyawaung" target="_blank" rel="noopener">Instagram</a></div>
+        <div class="glass social-item"><i class="fab fa-telegram-plane"></i> <a href="https://t.me/moekyawaung" target="_blank" rel="noopener">Tele
+
+               <div class="glass social-item"><i class="fab fa-telegram-plane"></i> <a href="https://t.me/moekyawaung" target="_blank" rel="noopener">Telegram</a></div>
+        <div class="glass social-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/959889000889" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="glass social-item"><i class="fab fa-discord"></i> <a href="https://discord.gg/moekyawaung" target="_blank" rel="noopener">Discord</a></div>
+        <div class="glass social-item"><i class="fab fa-facebook-f"></i> <a href="https://www.facebook.com/moekyawaung" target="_blank" rel="noopener">Facebook</a></div>
+        <div class="glass social-item"><i class="fab fa-x-twitter"></i> <a href="https://x.com/moekyawaung" target="_blank" rel="noopener">X (Twitter)</a></div>
+        <div class="glass social-item"><i class="fab fa-tiktok"></i> <a href="https://www.tiktok.com/@moekyawaung" target="_blank" rel="noopener">TikTok</a></div>
+        <div class="glass social-item"><i class="fab fa-snapchat-ghost"></i> <a href="https://www.snapchat.com/add/moekyawaung" target="_blank" rel="noopener">Snapchat</a></div>
+        <div class="glass social-item"><i class="fab fa-medium-m"></i> <a href="https://medium.com/@moekyawaung" target="_blank" rel="noopener">Medium</a></div>
+        <div class="glass social-item"><i class="fab fa-dev"></i> <a href="https://dev.to/moekyawaung" target="_blank" rel="noopener">Dev.to</a></div>
+        <div class="glass social-item"><i class="fab fa-stack-overflow"></i> <a href="https://stackoverflow.com/users/moekyawaung" target="_blank" rel="noopener">Stack Overflow</a></div>
+        <div class="glass social-item"><i class="fab fa-hackerrank"></i> <a href="https://www.hackerrank.com/moekyawaung" target="_blank" rel="noopener">HackerRank</a></div>
+        <div class="glass social-item"><i class="fab fa-gitlab"></i> <a href="https://gitlab.com/moekyawaung" target="_blank" rel="noopener">GitLab</a></div>
+        <div class="glass social-item"><i class="fas fa-user-circle"></i> <a href="https://gravatar.com/moekyawaung13721" target="_blank" rel="noopener">Gravatar</a></div>
+        <div class="glass social-item"><i class="fab fa-google-play"></i> <a href="https://play.google.com/store/apps/developer?id=Moe+Kyaw+Aung" target="_blank" rel="noopener">Play Store</a></div>
+        <div class="glass social-item"><i class="fas fa-globe"></i> <a href="https://moekyawaung.strikingly.com" target="_blank" rel="noopener">Strikingly</a></div>
+        <div class="glass social-item"><i class="fab fa-slack"></i> <a href="https://moekyawaung.slack.com" target="_blank" rel="noopener">Slack</a></div>
+        <div class="glass social-item"><i class="fab fa-paypal"></i> <a href="https://www.paypal.com/paypalme/my/profile" target="_blank" rel="noopener">PayPal</a></div>
+        <div class="glass social-item"><i class="fab fa-wordpress"></i> <a href="https://moekyawaung.wordpress.com" target="_blank" rel="noopener">WordPress</a></div>
+        <div class="glass social-item"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" rel="noopener">LinkedIn (Alt)</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [19] ORGANIZATIONS SECTION
+    ============================================================ -->
+  <!-- Purpose: Display professional affiliations and organizations -->
+  <section class="section-padding" id="organizations">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Organizations</span>
+        <h2 class="section-title">Professional Affiliations</h2>
+        <p class="section-subtitle">Communities and organizations I'm proud to be part of.</p>
+      </div>
+      <div class="org-grid">
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fab fa-google"></i></div>
+          <h5>Google Developers</h5>
+          <p>Launchpad Participant</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fab fa-github"></i></div>
+          <h5>GitHub Campus Expert</h5>
+          <p>Technology Advocate</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fab fa-android"></i></div>
+          <h5>Android Dev Community</h5>
+          <p>Senior Member</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fas fa-shield-alt"></i></div>
+          <h5>OWASP Foundation</h5>
+          <p>Security Contributor</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fab fa-linux"></i></div>
+          <h5>Linux Foundation</h5>
+          <p>Open Source Member</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fas fa-code"></i></div>
+          <h5>Myanmar Developers</h5>
+          <p>Active Contributor</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fab fa-aws"></i></div>
+          <h5>AWS Community</h5>
+          <p>Cloud Practitioner</p>
+        </div>
+        <div class="glass org-card">
+          <div class="org-icon"><i class="fas fa-robot"></i></div>
+          <h5>AI/ML Enthusiasts</h5>
+          <p>Member</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [20] TESTIMONIALS / CAROUSEL SECTION
+    ============================================================ -->
+  <!-- Purpose: Display client testimonials in auto-scrolling carousel -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonials</span>
+        <h2 class="section-title">What Others Say</h2>
+        <p class="section-subtitle">Feedback from clients and colleagues I've worked with.</p>
+      </div>
+      <div class="testimonials-carousel">
+        <!-- Testimonial Card Template -->
+        <div class="glass testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Moe is an exceptional Android developer. His deep understanding of Kotlin and Clean Architecture transformed our app's performance and maintainability."</blockquote>
+          <div class="author">
+            <div class="author-avatar">SL</div>
+            <div class="author-info">
+              <p class="name">Sarah L.</p>
+              <p class="role">CTO, BetaCorp</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Working with Moe was a game-changer. He delivered our POS system on time, with excellent code quality and comprehensive documentation."</blockquote>
+          <div class="author">
+            <div class="author-avatar">MK</div>
+            <div class="author-info">
+              <p class="name">Marcus K.</p>
+              <p class="role">VP Product, CipherTech</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Moe brought our vision to life. His expertise in Jetpack Compose and Firebase integration was invaluable. Highly recommended."</blockquote>
+          <div class="author">
+            <div class="author-avatar">AJ</div>
+            <div class="author-info">
+              <p class="name">Aisha J.</p>
+              <p class="role">Head of Ops, Datum.io</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"Professional, skilled, and deeply committed to quality. Moe's work on our app architecture set new standards for our entire engineering team."</blockquote>
+          <div class="author">
+            <div class="author-avatar">RT</div>
+            <div class="author-info">
+              <p class="name">Ryan T.</p>
+              <p class="role">Engineering Lead, Flux</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I've worked with many Android developers over the years, but Moe stands out for his clean code, attention to detail, and ability to deliver complex features on schedule."</blockquote>
+          <div class="author">
+            <div class="author-avatar">DW</div>
+            <div class="author-info">
+              <p class="name">David W.</p>
+              <p class="role">CEO, TechVenture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [21] PRICING TABLE SECTION
+    ============================================================ -->
+  <!-- Purpose: Display service plans and pricing -->
+  <section class="section-padding" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Pricing</span>
+        <h2 class="section-title">Service Plans</h2>
+        <p class="section-subtitle">Flexible engagement models for your project needs.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <!-- Plan 1: Hourly -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card text-center p-4 h-100">
+            <h4 class="mb-3">Hourly</h4>
+            <p class="display-4 fw-bold" style="color:var(--accent);">$45<span style="font-size:1rem;color:var(--text-muted);">/hr</span></p>
+            <ul class="list-unstyled mt-3 mb-4 text-start">
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Android Development</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Bug Fixes & Maintenance</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Code Reviews</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Technical Consultation</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Architecture Design</li>
+            </ul>
+            <a href="#contact" class="btn-primary-custom w-100 justify-content-center">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Plan 2: Project Based (Featured) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card text-center p-4 h-100" style="border-color:var(--accent);position:relative;">
+            <span style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 20px;border-radius:50px;font-size:0.8rem;font-weight:600;">Popular</span>
+            <h4 class="mb-3">Project Based</h4>
+            <p class="display-4 fw-bold" style="color:var(--accent);">$2,500<span style="font-size:1rem;color:var(--text-muted);">+/project</span></p>
+            <ul class="list-unstyled mt-3 mb-4 text-start">
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Full App Development</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Architecture Setup</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> API Integration</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Testing & QA</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Play Store Deployment</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> 30 Days Support</li>
+            </ul>
+            <a href="#contact" class="btn-primary-custom w-100 justify-content-center">Get Quote</a>
+          </div>
+        </div>
+
+        <!-- Plan 3: Retainer -->
+        <div class="col-md-6 col-lg-4">
+          <div class="glass-card text-center p-4 h-100">
+            <h4 class="mb-3">Retainer</h4>
+            <p class="display-4 fw-bold" style="color:var(--accent);">$3,000<span style="font-size:1rem;color:var(--text-muted);">/mo</span></p>
+            <ul class="list-unstyled mt-3 mb-4 text-start">
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> 40 Hours/month</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Priority Support</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Weekly Reports</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Code Ownership</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> CI/CD Setup</li>
+              <li class="py-2"><i class="fas fa-check text-success me-2"></i> Security Audits</li>
+            </ul>
+            <a href="#contact" class="btn-primary-custom w-100 justify-content-center">Start Retainer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [22] FAQ ACCORDION SECTION
+    ============================================================ -->
+  <!-- Purpose: Frequently asked questions with expand/collapse -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Everything you need to know before we start working together.</p>
+      </div>
+      <div class="faq-container">
+        <!-- FAQ Item 1 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+            What Android development services do you offer?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq1">
+            <p>I specialize in full-cycle Android development including: building new apps from scratch, refactoring legacy codebases, implementing Jetpack Compose UI, integrating Firebase services, setting up CI/CD pipelines, and providing code reviews. I work with Kotlin, MVVM, Clean Architecture, and modern Android best practices.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+            How long does it take to build an Android app?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq2">
+            <p>The timeline depends on complexity. A simple app with basic features can take 4-6 weeks. A medium-complexity app with API integration and user authentication typically takes 8-12 weeks. Enterprise-level applications with multiple features, offline support, and advanced security may take 3-6 months. I always provide a detailed timeline during our initial consultation.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+            Do you provide post-launch support?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq3">
+            <p>Yes, absolutely. Every project includes a 30-day post-launch support period where I address any issues or bugs. For ongoing maintenance, I offer retainer packages that include regular updates, performance monitoring, and feature enhancements. Long-term partnerships are my preferred way of working.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+            What is your approach to app security?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq4">
+            <p>Security is embedded in every layer of my development process. I implement AES-256 encryption for data at rest, TLS 1.3 for data in transit, secure credential storage using Android Keystore, network security configurations, and follow OWASP mobile security best practices. I also conduct regular dependency scanning and security audits.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+            Can you upgrade an existing Android app?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq5">
+            <p>Definitely. I frequently work on modernizing legacy apps — migrating from Java to Kotlin, adopting Jetpack Compose for UI, implementing MVVM architecture, integrating modern dependency injection, and improving performance. I always ensure backward compatibility and a smooth transition without disrupting existing users.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+            What technologies and tools do you use?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq6">
+            <p>My primary tech stack includes: Kotlin, Jetpack Compose, Android SDK, MVVM/Clean Architecture, Firebase (Auth, Firestore, Cloud Functions, Analytics), Retrofit, Room, Dagger/Hilt, Coroutines/Flow, Material 3, Navigation Component, WorkManager, Coil/Glide, GitHub Actions for CI/CD, and Figma for design collaboration.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="glass faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq7">
+            How do you handle project communication?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" id="faq7">
+            <p>I use agile methodologies with regular updates. Typically, we'll have a kickoff meeting, then weekly progress calls or async updates via Slack/Telegram. I use Jira or Trello for task tracking, and provide daily or weekly progress reports. Communication is available via email, phone, Telegram, or video calls based on your preference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [23] NEWSLETTER SUBSCRIPTION SECTION
+    ============================================================ -->
+  <!-- Purpose: Email newsletter signup form -->
+  <section class="section-padding" id="newsletter" style="background:var(--bg-secondary);">
+    <div class="container text-center">
+      <div class="section-header">
+        <span class="section-tag">Stay Updated</span>
+        <h2 class="section-title">Subscribe to My Newsletter</h2>
+        <p class="section-subtitle">Get the latest on Android development tips, tutorials, project updates, and tech insights delivered to your inbox monthly.</p>
+      </div>
+      <form class="newsletter-form justify-content-center" id="newsletterForm">
+        <input type="email" name="email" placeholder="Enter your email address" required aria-label="Email for newsletter">
+        <button type="submit" aria-label="Subscribe">Subscribe Now</button>
+      </form>
+      <p id="newsletterMessage" style="color:var(--success);margin-top:1rem;display:none;">
+        <i class="fas fa-check-circle"></i> Thank you for subscribing! Check your inbox for confirmation.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [24] CONTACT SECTION
+    ============================================================ -->
+  <!-- Purpose: Contact form with Google Maps integration -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Have a project in mind? Let's discuss how I can help bring your vision to life. I typically respond within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <!-- Left Column: Contact Form -->
+        <div>
+          <form class="contact-form" id="contactForm">
+            <!-- Name -->
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Full Name" required aria-label="Your name">
+              <div class="error-message" id="nameError">Please enter your name</div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email Address" required aria-label="Your email">
+              <div class="error-message" id="emailError">Please enter a valid email</div>
+            </div>
+
+            <!-- Subject -->
+            <div class="form-group">
+              <input type="text" name="subject" placeholder="Subject (e.g., Project Inquiry)" required aria-label="Subject">
+              <div class="error-message" id="subjectError">Please enter a subject</div>
+            </div>
+
+            <!-- Service Type (Dropdown) -->
+            <div class="form-group">
+              <select name="service" aria-label="Service type">
+                <option value="">Select Service Type</option>
+                <option value="android-development">Android Development (New App)</option>
+                <option value="app-modernization">App Modernization / Migration</option>
+                <option value="code-review">Code Review & Architecture</option>
+                <option value="bug-fixing">Bug Fixing & Maintenance</option>
+                <option value="consultation">Technical Consultation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Budget Range (Dropdown) -->
+            <div class="form-group">
+              <select name="budget" aria-label="Budget range">
+                <option value="">Select Budget Range</option>
+                <option value="under-1k">Under $1,000</option>
+                <option value="1k-5k">$1,000 - $5,000</option>
+                <option value="5k-10k">$5,000 - $10,000</option>
+                <option value="10k-25k">$10,000 - $25,000</option>
+                <option value="25k-plus">$25,000+</option>
+                <option value="not-sure">Not Sure / Discuss</option>
+              </select>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group">
+              <textarea name="message" placeholder="Tell me about your project, goals, timeline, and any specific requirements..." required aria-label="Your message" rows="5"></textarea>
+              <div class="error-message" id="messageError">Please enter your message</div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-primary-custom">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+
+          <!-- Success Message -->
+          <div id="formSuccess" style="display:none;color:var(--success);margin-top:1rem;padding:1rem;background:rgba(52,211,153,0.1);border-radius:12px;">
+            <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you within 24 hours.
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Info + Map -->
+        <div class="contact-info">
+          <!-- Contact Info Cards -->
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h5>Email</h5>
+              <p>moekyawaung@programmer.net</p>
+              <p style="color:var(--text-muted);font-size:0.9rem;">moekyawaung@engineer.com</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <p>+95 9 889 000 889</p>
+              <p style="color:var(--text-muted);font-size:0.9rem;">+959 666 000 050</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Tachileik, Myanmar 🇲🇲</p>
+              <p style="color:var(--text-muted);font-size:0.9rem;">Bangkok, Thailand 🇹🇭</p>
+            </div>
+          </div>
+
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h5>GitHub</h5>
+              <p><a href="https://github.com/Dev-moe-kyawaung" target="_blank" rel="noopener">github.com/Dev-moe-kyawaung</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fab fa-linkedin-in"></i></div>
+            <div>
+              <h5>LinkedIn</h5>
+              <p><a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" rel="noopener">linkedin.com/in/moe-kyaw-aung</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fab fa-telegram-plane"></i></div>
+            <div>
+              <h5>Telegram</h5>
+              <p><a href="https://t.me/moekyawaung" target="_blank" rel="noopener">@moekyawaung</a></p>
+            </div>
+          </div>
+
+          <div class="contact-info-item glass p-3">
+            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <h5>WhatsApp</h5>
+              <p><a href="https://wa.me/959889000889" target="_blank" rel="noopener">+95 9 889 000 889</a></p>
+            </div>
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="map-container glass" style="border:none;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.70907053782!2d98.853362190356!3d18.5611236901033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30d97d2f1e3b7e7b%3A0x9c1e5b6a8f3c2f0!2sTachileik%2C+Myanmar!5e0!3m2!1sen!2s!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Moe Kyaw Aung Location - Tachileik, Myanmar"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [25] BLOG / ARTICLES SECTION (Optional)
+    ============================================================ -->
+  <!-- Purpose: Showcase recent blog posts or articles -->
+  <section class="section-padding" id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Blog</span>
+        <h2 class="section-title">Latest Articles</h2>
+        <p class="section-subtitle">Thoughts on Android development, clean architecture, and building better apps.</p>
+      </div>
+      <div class="blog-grid">
+        <!-- Blog Card 1 -->
+        <div class="glass-card blog-card">
+          <div class="blog-image">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795856/copilot_image_1778795000722_eo96gj.png" alt="Clean Architecture in Android" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">May 15, 2025</span>
+            <h4>Clean Architecture in Modern Android Apps</h4>
+            <p>How to structure your Android project using Clean Architecture principles with Jetpack Compose and MVVM.</p>
+            <a href="#" class="blog-read-more">Read More →</a>
+          </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="glass-card blog-card">
+          <div class="blog-image">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795859/copilot_image_1778794430377_n7xlmz.png" alt="Kotlin Coroutines" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">April 28, 2025</span>
+            <h4>Mastering Kotlin Coroutines and Flow</h4>
+            <p>Deep dive into asynchronous programming with Kotlin Coroutines, StateFlow, and SharedFlow for reactive UIs.</p>
+            <a href="#" class="blog-read-more">Read More →</a>
+          </div>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="glass-card blog-card">
+          <div class="blog-image">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795856/copilot_image_1778794626112_ega7kk.png" alt="Firebase Integration" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">April 10, 2025</span>
+            <h4>Firebase Integration Best Practices</h4>
+            <p>Essential tips for integrating Firebase services efficiently in your Android app with security in mind.</p>
+            <a href="#" class="blog-read-more">Read More →</a>
+          </div>
+        </div>
+
+        <!-- Blog Card 4 -->
+        <div class="glass-card blog-card">
+          <div class="blog-image">
+            <img src="https://res.cloudinary.com/dye5qpwii/image/upload/v1778795847/copilot_image_1778795115579_acfm5j.png" alt="CI/CD Android" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <span class="blog-date">March 22, 2025</span>
+            <h4>Setting Up CI/CD for Android with GitHub Actions</h4>
+            <p>Automate your build, test, and deployment pipeline for Android apps using GitHub Actions and Firebase App Distribution.</p>
+            <a href="#" class="blog-read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    [26] FOOTER
+    ============================================================ -->
+  <!-- Purpose: Multi-column footer with links, social, newsletter -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand & Description -->
+        <div class="footer-col">
+          <h5 class="footer-brand">Moe Kyaw Aung</h5>
+          <p>Senior Android Developer with nearly 12 years of experience building secure, scalable, and user-friendly mobile applications. Based in Tachileik, Myanmar & Bangkok, Thailand.</p>
+          <div class="footer-social-links">
+            <a href="https://github.com/Dev-moe-kyawaung" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/moe-kyaw-aung-2653093a1" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://gravatar.com/moekyawaung13721" target="_blank" rel="noopener" aria-label="Gravatar"><i class="fas fa-user-circle"></i></a>
+            <a href="mailto:moekyawaung@programmer.net" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+959889000889" aria-label="Phone"><i class="fas fa-phone"></i></a>
+            <a href="https://t.me/moekyawaung" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="https://play.google.com/store/apps/developer?id=Moe+Kyaw+Aung" target="_blank" rel="noopener" aria-label="Play Store"><i class="fab fa-google-play"></i></a>
+            <a href="https://www.youtube.com/channel/UCuTXUguZb4xjeL2nX8WJG" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tumblr.com/moekyawaung" target="_blank" rel="noopener" aria-label="Tumblr"><i class="fab fa-tumblr"></i></a>
+            <a href="https://www.flickr.com/people/204037451@N06" target="_blank" rel="noopener" aria-label="Flickr"><i class="fab fa-flickr"></i></a>
+            <a href="https://bsky.app/profile/moekyawaung96.bsky.social" target="_blank" rel="noopener" aria-label="Bluesky"><i class="fas fa-cloud"></i></a>
+            <a href="https://vimeo.com/user252414232" target="_blank" rel="noopener" aria-label="Vimeo"><i class="fab fa-vimeo-v"></i></a>
+            <a href="https://www.twitch.tv/moekyawaung" target="_blank" rel="noopener" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://www.reddit.com/user/moekyawaung" target="_blank" rel="noopener" aria-label="Reddit"><i class="fab fa-reddit-alien"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills & Tech Stack</a></li>
+            <li><a href="#apps">My Apps</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#">Android App Development</a></li>
+            <li><a href="#">App Modernization</a></li>
+            <li><a href="#">Code Review & Auditing</a></li>
+            <li><a href="#">Architecture Consulting</a></li>
+            <li><a href="#">Performance Optimization</a></li>
+            <li><a href="#">Security Auditing</a></li>
+            <li><a href="#">CI/CD Setup</a></li>
+            <li><a href="#">Mentoring & Training</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Resources -->
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul>
+            <li><a href="https://github.com/Dev-moe-kyawaung" target="_blank" rel="noopener">GitHub Repos</a></li>
+            <li><a href="https://medium.com/@moekyawaung" target="_blank" rel="noopener">Tech Blog</a></li>
+            <li><a href="#">Portfolio Gallery</a></li>
+            <li><a href="#">Resume (PDF)</a></li>
+            <li><a href="#">Certifications</a></li>
+            <li><a href="#">Case Studies</a></li>
+            <li><a href="#">Open Source Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: Legal & Contact -->
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">GDPR Compliance</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+          <h5 style="margin-top:1.5rem;">Contact</h5>
+          <ul>
+            <li><a href="mailto:moekyawaung@programmer.net">moekyawaung@programmer.net</a></li>
+            <li><a href="tel:+959889000889">+95 9 889 000 889</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Moe Kyaw Aung. All Rights Reserved. Built with ❤️ using Kotlin, Jetpack Compose, and Clean Architecture.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Sitemap</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+
+      <!-- Tech Stack Footer Badge -->
+      <div class="footer-tech-badge">
+        <span><i class="fab fa-android"></i> Android</span>
+        <span><i class="fab fa-kotlin"></i> Kotlin</span>
+        <span><i class="fas fa-fire"></i> Jetpack Compose</span>
+        <span><i class="fas fa-shield-alt"></i> Clean Architecture</span>
+        <span><i class="fas fa-database"></i> Firebase</span>
+        <span><i class="fas fa-cloud"></i> CI/CD</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+    JAVASCRIPT — All Interactive Features
+    ============================================================ -->
+  <script>
+    (function() {
+      'use strict';
+
+      /* ============================================================
+         1. PRELOADER
+         ============================================================ */
+      window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.classList.add('hidden');
+        }
+      });
+
+      /* ============================================================
+         2. CUSTOM CURSOR
+         ============================================================ */
+      const cursor = document.getElementById('cursor');
+      if (cursor && window.innerWidth > 768) {
+        document.addEventListener('mousemove', function(e) {
+          cursor.style.left = e.clientX + 'px';
+          cursor.style.top = e.clientY + 'px';
+        });
+
+        // Add hover effect on interactive elements
+        document.querySelectorAll('a, button, .glass-card, .btn-primary-custom, .btn-outline-custom').forEach(function(el) {
+          el.addEventListener('mouseenter', function() { cursor.classList.add('hover'); });
+          el.addEventListener('mouseleave', function() { cursor.classList.remove('hover'); });
+        });
+      }
+
+      /* ============================================================
+         3. DARK/LIGHT MODE TOGGLE
+         ============================================================ */
+      const themeToggle = document.getElementById('themeToggle');
+      const html = document.documentElement;
+      let currentTheme = html.getAttribute('data-theme') || 'dark';
+
+      // Load saved theme from localStorage
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        html.setAttribute('data-theme', savedTheme);
+        currentTheme = savedTheme;
+        if (savedTheme === 'light') {
+          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+      }
+
+      themeToggle.addEventListener('click', function() {
+        if (currentTheme === 'dark') {
+          html.setAttribute('data-theme', 'light');
+          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+          currentTheme = 'light';
+        } else {
+          html.setAttribute('data-theme', 'dark');
+          themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          currentTheme = 'dark';
+        }
+        localStorage.setItem('theme', currentTheme);
+      });
+
+      /* ============================================================
+         4. PARTICLES.JS BACKGROUND
+         ============================================================ */
+      if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: '#6c63ff' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.3, random: true },
+            size: { value: 3, random: true },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: '#6c63ff',
+              opacity: 0.15,
+              width: 1
+            },
+            move: {
+              enable: true,
+              speed: 1.5,
+              direction: 'none',
+              random: true,
+              straight: false,
+              out_mode: 'out',
+              bounce: false
+            }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: {
+              onhover: { enable: true, mode: 'grab' },
+              onclick: { enable: true, mode: 'push' },
+              resize: true
+            },
+            modes: {
+              grab: { distance: 140, line_linked: { opacity: 0.5 } },
+              push: { particles_nb: 4 }
+            }
+          },
+          retina_detect: true
+        });
+      }
+
+      /* ============================================================
+         5. TYPING ANIMATION FOR HERO
+         ============================================================ */
+      const typingElement = document.getElementById('typingText');
+      if (typingElement) {
+        const phrases = [
+          'Android Developer | Kotlin',
+          'Jetpack Compose Expert',
+          'MVVM | Clean Architecture',
+          'Firebase | CI/CD Specialist',
+          'Kotlin Multiplatform (KMM)',
+          '12+ Years Experience'
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 80;
+
+        function typeEffect() {
+          const currentPhrase = phrases[phraseIndex];
+          
+          if (isDeleting) {
+            typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 40;
+          } else {
+            typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 80;
+          }
+
+          if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pause at end of typing
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typeSpeed = 400; // Pause before next phrase
+          }
+
+          setTimeout(typeEffect, typeSpeed);
+        }
+
+        typeEffect();
+      }
+
+      /* ============================================================
+         6. ANIMATED COUNTERS (with Progress Rings)
+         ============================================================ */
+      function animateCounter(element, target) {
+        if (!element) return;
+        let current = 0;
+        const increment = Math.ceil(target / 60); // 60 fps for ~1 second
+        const timer = setInterval(function() {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = current;
+        }, 16); // ~60fps
+      }
+
+      function animateProgressRings() {
+        const ringIds = ['ring-1', 'ring-2', 'ring-3', 'ring-4'];
+        const values = [85, 92, 78, 95];
+        
+        ringIds.forEach(function(id, index) {
+          const ring = document.getElementById(id);
+          if (ring) {
+            const circumference = 2 * Math.PI * 35; // r = 35
+            ring.style.strokeDasharray = circumference;
+            const offset = circumference - (values[index] / 100) * circumference;
+            ring.style.strokeDashoffset = offset;
+          }
+        });
+      }
+
+      // Intersection Observer for counters
+      const counterObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const target = parseInt(entry.target.getAttribute('data-target'));
+            if (!isNaN(target)) {
+              animateCounter(entry.target, target);
+            }
+            animateProgressRings();
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll('.counter-value').forEach(function(el) {
+        counterObserver.observe(el);
+      });
+
+      /* ============================================================
+         7. SCROLL REVEAL OBSERVER
+         ============================================================ */
+      const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+      revealElements.forEach(function(el) {
+        revealObserver.observe(el);
+      });
+
+      /* ============================================================
+         8. NAVBAR SCROLL EFFECT
+         ============================================================ */
+      const navbar = document.getElementById('navbar');
+      if (navbar) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 80) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+        }, { passive: true });
+      }
+
+      /* ============================================================
+         9. HAMBURGER MENU TOGGLE
+         ============================================================ */
+      const hamburger = document.getElementById('hamburger');
+      const navMenu = document.getElementById('navMenu');
+
+      if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+          navMenu.classList.toggle('mobile-open');
+          hamburger.classList.toggle('active');
+        });
+
+        // Close menu on link click (mobile)
+        document.querySelectorAll('.nav-menu a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            if (window.innerWidth <= 991) {
+              navMenu.classList.remove('mobile-open');
+              hamburger.classList.remove('active');
+            }
+          });
+        });
+      }
+
+      /* ============================================================
+         10. ACTIVE NAV LINK HIGHLIGHT
+         ============================================================ */
+      const sections = document.querySelectorAll('section[id]');
+      const navAnchors = document.querySelectorAll('.nav-menu a');
+
+      function highlightActiveNav() {
+        let current = '';
+        sections.forEach(function(section) {
+          const sectionTop = section.offsetTop - 120;
+          if (window.pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navAnchors.forEach(function(link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', highlightActiveNav, { passive: true });
+      window.addEventListener('load', highlightActiveNav);
+
+      /* ============================================================
+         11. SMOOTH SCROLL FOR ANCHOR LINKS
+         ============================================================ */
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href === '#') return;
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            const navHeight = navbar ? navbar.offsetHeight : 60;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      /* ============================================================
+         12. FAQ ACCORDION
+         ============================================================ */
+      document.querySelectorAll('.faq-question').forEach(function(button) {
+        button.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          const answer = document.getElementById(this.getAttribute('aria-controls'));
+
+          // Close all other FAQs
+          document.querySelectorAll('.faq-question').forEach(function(btn) {
+            if (btn !== button) {
+              btn.setAttribute('aria-expanded', 'false');
+              const otherAnswer = document.getElementById(btn.getAttribute('aria-controls'));
+              if (otherAnswer) otherAnswer.classList.remove('open');
+            }
+          });
+
+          if (expanded) {
+            this.setAttribute('aria-expanded', 'false');
+            if (answer) answer.classList.remove('open');
+          } else {
+            this.setAttribute('aria-expanded', 'true');
+            if (answer) answer.classList.add('open');
+          }
+        });
+      });
+
+      /* ============================================================
+         13. CONTACT FORM VALIDATION
+         ============================================================ */
+      const contactForm = document.getElementById('contactForm');
+      const formSuccess = document.getElementById('formSuccess');
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          let isValid = true;
+
+          // Validate name
+          const nameField = this.querySelector('[name="name"]');
+          const nameError = document.getElementById('nameError');
+          if (!nameField.value.trim()) {
+            if (nameError) nameError.classList.add('show');
+            isValid = false;
+          } else {
+            if (nameError) nameError.classList.remove('show');
+          }
+
+          // Validate email
+          const emailField = this.querySelector('[name="email"]');
+          const emailError = document.getElementById('emailError');
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(emailField.value.trim())) {
+            if (emailError) emailError.classList.add('show');
+            isValid = false;
+          } else {
+            if (emailError) emailError.classList.remove('show');
+          }
+
+          // Validate subject
+          const subjectField = this.querySelector('[name="subject"]');
+          const subjectError = document.getElementById('subjectError');
+          if (!subjectField.value.trim()) {
+            if (subjectError) subjectError.classList.add('show');
+            isValid = false;
+          } else {
+            if (subjectError) subjectError.classList.remove('show');
+          }
+
+          // Validate message
+          const messageField = this.querySelector('[name="message"]');
+          const messageError = document.getElementById('messageError');
+          if (!messageField.value.trim()) {
+            if (messageError) messageError.classList.add('show');
+            isValid = false;
+          } else {
+            if (messageError) messageError.classList.remove('show');
+          }
+
+          if (isValid) {
+            // Simulate form submission
+            if (formSuccess) {
+              formSuccess.style.display = 'block';
+            }
+            this.reset();
+            setTimeout(function() {
+              if (formSuccess) formSuccess.style.display = 'none';
+            }, 5000);
+          }
+        });
+      }
+
+      /* ============================================================
+         14. NEWSLETTER FORM
+         ============================================================ */
+      const newsletterForm = document.getElementById('newsletterForm');
+      const newsletterMessage = document.getElementById('newsletterMessage');
+
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (newsletterMessage) {
+            newsletterMessage.style.display = 'block';
+          }
+          this.reset();
+          setTimeout(function() {
+            if (newsletterMessage) newsletterMessage.style.display = 'none';
+          }, 4000);
+        });
+      }
+
+      /* ============================================================
+         15. COPY EMAIL TO CLIPBOARD
+         ============================================================ */
+      window.copyEmail = function(element) {
+        const email = element.getAttribute('data-email');
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(email).then(function() {
+            const originalText = element.textContent;
+            element.textContent = '✓ Copied!';
+            setTimeout(function() {
+              element.textContent = originalText;
+            }, 1500);
+          });
+        } else {
+          // Fallback for older browsers
+          const textarea = document.createElement('textarea');
+          textarea.value = email;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          const originalText = element.textContent;
+          element.textContent = '✓ Copied!';
+          setTimeout(function() {
+            element.textContent = originalText;
+          }, 1500);
+        }
+      };
+
+      /* ============================================================
+         16. BACK TO TOP BUTTON
+         ============================================================ */
+      const backToTop = document.getElementById('backToTop');
+
+      if (backToTop) {
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 400) {
+            backToTop.classList.add('show');
+          } else {
+            backToTop.classList.remove('show');
+          }
+        }, { passive: true });
+
+        backToTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ============================================================
+         17. STICKY CTA BUTTON
+         ============================================================ */
+      const stickyCta = document.getElementById('stickyCta');
+
+      if (stickyCta) {
+        stickyCta.addEventListener('click', function() {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            const navHeight = navbar ? navbar.offsetHeight : 60;
+            const targetPosition = contactSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          }
+        });
+      }
+
+      /* ============================================================
+         18. TESTIMONIAL CAROUSEL AUTO-SCROLL
+         ============================================================ */
+      const carousel = document.querySelector('.testimonials-carousel');
+      if (carousel) {
+        let intervalId;
+
+        function startAutoScroll() {
+          intervalId = setInterval(function() {
+            if (document.hidden) return;
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            const currentScroll = carousel.scrollLeft;
+            
+            if (currentScroll >= maxScroll - 20) {
+              carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+              carousel.scrollBy({ left: 360, behavior: 'smooth' });
+            }
+          }, 5000);
+        }
+
+        function stopAutoScroll() {
+          clearInterval(intervalId);
+        }
+
+        startAutoScroll();
+
+        carousel.addEventListener('mouseenter', stopAutoScroll);
+        carousel.addEventListener('mouseleave', startAutoScroll);
+        carousel.addEventListener('touchstart', stopAutoScroll, { passive: true });
+        carousel.addEventListener('touchend', startAutoScroll);
+      }
+
+      /* ============================================================
+         19. IMAGE LIGHTBOX
+         ============================================================ */
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const closeLightbox = document.getElementById('closeLightbox');
+
+      // Make profile and blog images clickable for lightbox
+      document.querySelectorAll('.hero-image-wrapper img, .about-image-wrapper img, .blog-image img').forEach(function(img) {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+          if (lightbox && lightboxImg) {
+            lightboxImg.src = this.src;
+            lightbox.classList.add('open');
+          }
+        });
+      });
+
+      if (closeLightbox) {
+        closeLightbox.addEventListener('click', function() {
+          lightbox.classList.remove('open');
+        });
+      }
+
+      if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+          if (e.target === lightbox) {
+            lightbox.classList.remove('open');
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox) {
+          lightbox.classList.remove('open');
+        }
+      });
+
+      /* ============================================================
+         20. PARALLAX SCROLL EFFECT (Hero)
+         ============================================================ */
+      window.addEventListener('scroll', function() {
+        const scrollY = window.pageYOffset;
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent && scrollY < window.innerHeight) {
+          const parallaxSpeed = 0.3;
+          heroContent.style.transform = 'translateY(' + (scrollY * parallaxSpeed) + 'px)';
+        }
+      }, { passive: true });
+
+      /* ============================================================
+         21. ACCESSIBILITY ENHANCEMENTS
+         ============================================================ */
+      // Keyboard navigation indicator
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-nav');
+        }
+      });
+
+      document.addEventListener('mousedown', function() {
+        document.body.classList.remove('keyboard-nav');
+      });
+
+      /* ============================================================
+         22. PERFORMANCE: RESIZE HANDLER
+         ============================================================ */
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          // Re-calculate any dynamic positions
+        }, 250);
+      }, { passive: true });
+
+      /* ============================================================
+         23. CONSOLE EASTER EGG
+         ============================================================ */
+      console.log('%c Moe Kyaw Aung — Senior Android Developer ', 'background:#6c63ff;color:#fff;font-size:1.2rem;padding:8px 16px;border-radius:4px;');
+      console.log('%c Built with ❤️ using Kotlin, Compose, and Clean Architecture ', 'color:#a78bfa;font-size:0.9rem;');
+      console.log('%c 🔗 https://github.com/Dev-moe-kyawaung ', 'color:#34d399;font-size:0.8rem;');
+      console.log('%c 📧 moekyawaung@programmer.net ', 'color:#f59e0b;font-size:0.8rem;');
+
+    })();
+  </script>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
