@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://moekyawaung.github.io/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /private/
