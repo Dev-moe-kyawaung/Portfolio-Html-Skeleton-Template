@@ -1,0 +1,36 @@
+# Auto detect text files
+* text=auto
+
+# HTML
+*.html text diff=html
+
+# CSS
+*.css text
+
+# JavaScript
+*.js text
+
+# Markdown
+*.md text
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text
+*.webp binary
+*.ico binary
+
+# Documents
+*.pdf binary
+
+# Archives
+*.zip binary
+*.tar.gz binary
+
+# Config
+*.yml text
+*.yaml text
+*.json text
+*.xml text
