@@ -1,0 +1,27 @@
+{
+  "name": "Moe Kyaw Aung — Senior Android Developer",
+  "short_name": "MKA Portfolio",
+  "description": "Senior Android Developer with 12+ years experience. Kotlin, Jetpack Compose, MVVM, Clean Architecture.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#6c63ff",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "android", "development"],
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image_1_buwgls.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dye5qpwii/image/upload/v1778747384/image_1_buwgls.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
